@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(45deg, #ccc 25%, transparent 25%),
+    linear-gradient(135deg, #ccc 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #ccc 75%),
+    linear-gradient(135deg, transparent 75%, #ccc 75%);
+  background-size: 25px 25px; /* Must be a square */
+  background-position: 0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px; /* Must be half of one side of the square */
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  padding: 1rem;
+  align-items: center;
+}
+
+/* Media query for computer-sized resolutions */
+@media (min-width: 1200px) {
+  .container {
+    grid-template-columns: 33.33% 66.66%;
+  }
+  .sub_div {
+    width: 40%;
+    font-weight: 600;
+  }
+}
+@media (min-width: 900px) {
+  .container {
+    grid-template-columns: 33.33% 66.66%;
+    padding: 0;
+    width: 85%;
+  }
+  .sub_div {
+    width: 40%;
+    transform: translateY(-20%);
+  }
+}
+@media (min-width: 600px) {
+  .container {
+    grid-template-columns: 33.33% 66.66%;
+    padding: 1rem;
+    width: 90%;
+  }
+  .sub_div {
+    width: 40%;
+    transform: translateY(30%);
+    margin: 0 auto;
+  }
+}
+
+.main_text {
+  font-size: 4rem;
+  color: #000;
+  text-align: center;
+  margin: 0;
+  white-space: normal;
+}
+.sub_div {
+  width: 80%;
+  margin: 0 auto;
+  font-weight: 600;
+}
+.sub_text {
+  color: black;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.main_text {
+  opacity: 0; /* Start with 0 opacity */
+  animation: fadeInOut 5s infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; /* Fade out */
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1; /* Fade in */
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0; /* Fade out */
+    transform: scale(1);
+  }
+}
+
+#mainForm {
+  margin: 0px auto;
+  border-collapse: collapse;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#mainForm input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 20px;
+  border: 1px solid white;
+  outline: none;
+  font-weight: 600;
+}
+#mainForm input::placeholder,
+#mainForm input:-ms-input-placeholder {
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+}
+#mainForm input:focus,
+#mainForm input:active {
+  outline: none;
+  background-color: white;
+  border-color: black;
+}
+
+#input-field {
+  border: 4px solid #000;
+}
+
+#mainButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 1px solid #000;
+  outline: none;
+  background-color: #000;
+  color: white;
+  font-weight: 900;
+  margin-left: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#mainButton:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+#response {
+  max-width: 100%;
+  margin: auto;
+  text-align: left;
+  padding: 10px;
+
+  border-collapse: collapse;
+}
+
+#result {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+#logo {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+
+#chatbox {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px dashed black;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.text {
+  color: black;
+}
+/* 
+.media {
+  list-style: none;
+  width: 3rem;
+  height: 3rem;
+}
+.social {
+  list-style: none;
+  text-decoration: none;
+  width: 3rem;
+  height: 3rem;
+}
+
+.connect {
+  color: black;
+  width: 3rem;
+  height: 3rem;
+} */
+
+/* Existing CSS code here */
+
+footer {
+  background-color: linear-gradient(45deg, #ccc 25%, transparent 25%),
+    linear-gradient(135deg, #ccc 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #ccc 75%),
+    linear-gradient(135deg, transparent 75%, #ccc 75%);
+  background-size: 25px 25px; /* Must be a square */
+  background-position: 0 0, 12.5px 0, 12.5px -12.5px, 0px 12.5px; /* Must be half of one side of the square */
+  display: flex;
+  justify-content: center;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.media {
+  margin: 0 0.5rem;
+}
+
+.connect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+}
+
+.icon_media {
+  height: 2rem;
+  width: 2rem;
+}
+
+footer {
+  margin-left: 2rem;
+}
