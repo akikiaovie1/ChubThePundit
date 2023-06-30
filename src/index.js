@@ -20,7 +20,7 @@ async function getData(input = prompt) {
       headers: {
         "Content-Type": "application/json",
         Authorization:
-          "Bearer " + "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",
+          "Bearer " + "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",
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
