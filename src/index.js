@@ -19,7 +19,8 @@ async function getData(input = prompt) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + process.env.OPENAI_API_KEY,
+        Authorization:
+          "Bearer " + "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",
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
