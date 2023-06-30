@@ -1,4 +1,4 @@
-import "./styles.css";
+import "../src/styles.css";
 import logo from "../dist/coach.png";
 
 const inputField = document.getElementById("input-field");
