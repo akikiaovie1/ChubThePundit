@@ -122,6 +122,16 @@ body {
   outline: none;
   font-weight: 600;
 }
+
+#shrink {
+  width: 30%;
+  max-width: 300px;
+  padding: 10px 20px;
+  border: 1px solid white;
+  outline: none;
+  font-weight: 600;
+}
+
 #mainForm input::placeholder,
 #mainForm input:-ms-input-placeholder {
   color: black;
