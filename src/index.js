@@ -15,11 +15,12 @@ let prompt = "";
 
 async function getData(input = prompt) {
   try {
+    const apiKey = document.getElementById("password-field").value;
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + process.env.OPENAI_API_KEY,
+        Authorization: "Bearer " + apiKey,
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
