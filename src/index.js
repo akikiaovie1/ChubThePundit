@@ -88,7 +88,3 @@ function pauseAudio() {
 function setVolume(volume) {
   backgroundAudio.volume = volume;
 }
-
-window.onload = function () {
-  playAudio();
-};
