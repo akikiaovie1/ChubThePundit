@@ -1,6 +1,8 @@
 import "../src/styles.css";
 import logo from "../dist/coach.png";
 
+window.addEventListener("load", playAudio);
+
 const inputField = document.getElementById("input-field");
 const form = document.getElementById("mainForm");
 const spinner = document.getElementById("spinner");
@@ -88,4 +90,3 @@ function pauseAudio() {
 function setVolume(volume) {
   backgroundAudio.volume = volume;
 }
-window.addEventListener("load", playAudio);
